@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+}
+
+@font-face {
+  font-family: "montserratt";
+  src: url("../../public/Montserrat-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
