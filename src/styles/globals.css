@@ -4,3 +4,13 @@
 
 html {
 }
+<<<<<<< HEAD
+=======
+
+@font-face {
+  font-family: "montserratt";
+  src: url("../../public/Montserrat-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+>>>>>>> 9f91b03879eeba35f5188a78034c45f3482dfd57
