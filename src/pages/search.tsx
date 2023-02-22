@@ -7,7 +7,7 @@ export default function Search() {
       <div>
         <Navbar></Navbar>
         <div className="flex-none md:flex-1 ">
-          <h2 className="mt-56 py-5 text-center font-serif text-2xl uppercase tracking-widest">
+          <h2 className="mt-56 py-5 text-center font-serif text-4xl uppercase tracking-widest">
             medicine
           </h2>
         </div>
@@ -18,7 +18,7 @@ export default function Search() {
               className="absolute top-0 bottom-0 left-3 my-auto h-6 w-6 text-gray-400"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="#609EA2"
             >
               <path
                 strokeLinecap="round"
@@ -30,7 +30,7 @@ export default function Search() {
             <input
               type="text"
               placeholder="Masukan nama obat..."
-              className="w-full rounded-full border bg-gray-50 py-4 pl-12 pr-4 text-gray-500 outline-none focus:border-primary focus:bg-white"
+              className="w-full rounded-full border bg-gray-50 py-4 pl-12 pr-4 text-xl text-gray-500 outline-none focus:border-primary focus:bg-white"
             />
           </div>
         </form>
