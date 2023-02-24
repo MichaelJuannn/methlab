@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer>
@@ -13,7 +15,9 @@ export function Footer() {
 export function Navbar() {
   return (
     <div className="bg-primary p-5">
-      <div>LOGO</div>
+      <Link href="/">
+        <div>LOGO</div>
+      </Link>
     </div>
   );
 }
