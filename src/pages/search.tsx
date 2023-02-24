@@ -1,5 +1,4 @@
-import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
+import { Navbar, Footer } from "@/components/layout";
 
 export default function Search() {
   return (
