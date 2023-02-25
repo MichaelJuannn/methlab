@@ -1,11 +1,22 @@
 import { Footer, Navbar } from "@/components/layout";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import { getMedicine } from "../api/obat/[query]";
 
-export default function Details() {
+interface Medicine {
+  id: number;
+  name: string;
+  desc: string;
+  manufacturer: string;
+  activeIngredient: string;
+}
+
+export default function Details(medicine: Medicine) {
+  console.log(medicine);
   return (
     <>
       <Navbar />
       <div className="mx-10 my-10 flex">
-        <div id="leftside" className="max-w-sm border">
+        <div id="leftside" className="max-w-sm flex-shrink-0 border">
           <img
             className=""
             src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
@@ -16,46 +27,30 @@ export default function Details() {
           </button>
         </div>
         <div id="rightside" className="ml-5">
-          <h1 className="text-4xl font-bold"> Parasetamol</h1>
-          <p>BAHAN:</p>
-          <ul>
-            <li>someshit</li>
-            <li>someshit</li>
-            <li>someshit</li>
-            <li>someshit</li>
-          </ul>
-          <p>Proses</p>
-          <ol>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-              accusantium nobis impedit id, aliquid cupiditate!
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-              accusantium nobis impedit id, aliquid cupiditate!
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-              accusantium nobis impedit id, aliquid cupiditate!
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-              accusantium nobis impedit id, aliquid cupiditate!
-            </li>
-          </ol>
+          <h1 className="text-4xl font-bold">💊 {medicine.name}</h1>
+          <p className="my-4">{medicine.desc}</p>
+          <div className="font-black">
+            <p>ACTIVE INGREDIENTS : {medicine.activeIngredient}</p>
+            <p> MANUFACTURED BY : {medicine.manufacturer}</p>
+          </div>
         </div>
       </div>
-      <Footer />
+      <div className="absolute bottom-0 left-0 w-full">
+        <Footer />
+      </div>
     </>
   );
 }
 
-function Contoh() {
-  return (
-    <img
-      className="w-1/3"
-      src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-      alt=""
-    />
-  );
-}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { details } = ctx.query;
+  const medicine = await getMedicine(parseInt(details as string));
+  if (!medicine) {
+    return {
+      notFound: true,
+    };
+  }
+  return {
+    props: medicine,
+  };
+};

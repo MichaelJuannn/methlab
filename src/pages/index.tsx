@@ -6,10 +6,18 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen bg-slate-500">
+      <div className="">
         <Navbar />
-        <div>
-          <div className="mt-5 ml-auto flex w-1/2 flex-col ">
+        <div className="fixed -z-10 h-screen w-screen overflow-hidden">
+          <Image
+            className="object-cover"
+            src={"/background.png"}
+            alt="background"
+            fill
+          ></Image>
+        </div>
+        <div className="mb-12">
+          <div className="mt-5 ml-auto flex w-1/2 flex-col">
             <h2 className="text-center text-7xl">
               Memahami Sistem "Evidence Based Meth" (Hanya contoh)
             </h2>
@@ -21,7 +29,9 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <Footer />
+        <div className="absolute bottom-0 left-0 w-full">
+          <Footer />
+        </div>
       </div>
     </>
   );

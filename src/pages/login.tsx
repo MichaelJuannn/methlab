@@ -2,7 +2,7 @@ import { Footer, Navbar } from "@/components/layout";
 
 export default function Login() {
   return (
-    <div className="min-h-screen bg-slate-400">
+    <div className="bg-slate-400">
       <Navbar />
       <div className="mx-auto mt-5 flex w-96 flex-col items-center rounded-md border-2 bg-slate-300 px-8 py-12 shadow ">
         <div className=" text-2xl">LOGIN</div>

@@ -10,7 +10,7 @@ export default function Search() {
             medicine
           </h2>
         </div>
-        <form className="w-15 ml-auto mr-auto min-w-max max-w-3xl overflow-auto  object-contain px-4">
+        <form className="w-15 ml-auto mr-auto min-w-max max-w-3xl overflow-auto object-contain px-4">
           <div className="relative">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,9 @@ export default function Search() {
             />
           </div>
         </form>
-        <Footer />
+        <div className="absolute bottom-0 left-0 w-full">
+          <Footer />
+        </div>
       </div>
     </>
   );
