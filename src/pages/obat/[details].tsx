@@ -11,11 +11,10 @@ interface Medicine {
 }
 
 export default function Details(medicine: Medicine) {
-  console.log(medicine);
   return (
     <>
       <Navbar />
-      <div className="mx-10 my-10 flex">
+      <div className="mx-10 my-10 flex" id="content">
         <div id="leftside" className="max-w-sm flex-shrink-0 border">
           <img
             className=""
@@ -34,9 +33,6 @@ export default function Details(medicine: Medicine) {
             <p> MANUFACTURED BY : {medicine.manufacturer}</p>
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-0 left-0 w-full">
-        <Footer />
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-Push 25/2/2023
+Push 26/2/2023
 
 TODO :
 
@@ -7,6 +7,6 @@ TODO :
 - [x] Medicine Details page
 - [ ] Get some real medicine images
 - [ ] Get some sleep
-- [ ] Implement Search functionality
+- [x] Implement Search functionality
 - [ ] Finishing UI
 - [ ] Fixing Routing and File Structures
