@@ -22,7 +22,7 @@ export default function Home() {
               Memahami Sistem "Evidence Based Meth" (Hanya contoh)
             </h2>
             <Link
-              href="/login"
+              href="/obat/result"
               className="m-auto  mt-10 w-1/2 rounded-md bg-red-600 py-2 px-8 text-center"
             >
               <button className="">Mulai Sekarang</button>
