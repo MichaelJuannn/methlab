@@ -6,6 +6,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const { body } = req;
+  if (!body.email || !body.password) return res.redirect(`/register?error=1`);
   const dateCreated = new Date();
   try {
     const newUser = await prisma.account.create({

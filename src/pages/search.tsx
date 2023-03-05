@@ -30,6 +30,7 @@ export default function Search() {
               />
             </svg>
             <input
+              name="q"
               type="text"
               placeholder="Masukan nama obat..."
               className="w-full rounded-full border bg-gray-50 py-4 pl-12 pr-4 text-xl text-gray-500 outline-none focus:border-primary focus:bg-white"

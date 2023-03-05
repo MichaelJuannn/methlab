@@ -6,7 +6,7 @@ export default function Register() {
       <Navbar />
       <main>
         <div className="">
-          <h1 className="text-center text-5xl">Register Your Account</h1>
+          <h1 className="m-10 text-center text-5xl">Register Your Account</h1>
           <div className="flex flex-col items-center">
             <form action="/api/register" method="post">
               <div className="m-4 w-fit rounded border bg-neutral-200 p-5">

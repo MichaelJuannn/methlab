@@ -21,5 +21,5 @@ export default async function handler(
       manufacturer: msg.manufacturer,
     },
   });
-  res.redirect("/dev/devform");
+  res.redirect("/obat/new");
 }

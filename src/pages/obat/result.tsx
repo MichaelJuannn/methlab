@@ -1,8 +1,10 @@
 import Card from "@/components/med-card";
 import { Footer, Navbar } from "@/components/layout";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import { GetServerSideProps } from "next";
 import prisma from "@/utils/client";
 import { useState } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 interface Medicine {
   id: number;
@@ -11,18 +13,25 @@ interface Medicine {
   manufacturer: string;
   activeIngredient: string;
 }
-interface Dataprops {
+interface DataProps {
   data: Medicine[];
 }
 
-export default function Result({ data }: Dataprops) {
-  const [query, setQuery] = useState("");
+export default function Result({ data }: DataProps) {
+  const router = useRouter();
+  const [query, setQuery] = useState(router.query.q as string);
   return (
     <>
       <Navbar />
+      <Link href="new">
+        <button className="m-5 ml-auto block rounded-md  bg-secondary py-2 px-8 text-white">
+          CREATE NEW RECORD
+        </button>
+      </Link>
       <div className="m-5 text-center">
         <input
           className="rounded border-2 px-5 py-2 shadow shadow-primary"
+          value={router.query.q}
           type="text"
           placeholder="Enter medicine name"
           onChange={(e) => setQuery(e.target.value)}
