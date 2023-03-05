@@ -11,6 +11,13 @@ datasource db {
 }
 
 
+model Account {
+  id Int @id @default(autoincrement())
+  email String @unique
+  password String
+  createdAt DateTime
+}
+
 model Medicine {
   id Int @id @default(autoincrement())
   name String

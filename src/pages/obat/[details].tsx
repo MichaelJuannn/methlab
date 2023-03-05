@@ -1,6 +1,6 @@
 import { Footer, Navbar } from "@/components/layout";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { getMedicine } from "../api/obat/[query]";
+import { getMedicine } from "@/pages/api/obat/[query]";
 
 interface Medicine {
   id: number;
@@ -22,7 +22,7 @@ export default function Details(medicine: Medicine) {
             alt=""
           />
           <button className="mx-auto my-2 block w-1/2  rounded bg-secondary py-3 px-6 text-white">
-            PRINT THIS SHIT🖨
+            PRINT 🖨
           </button>
         </div>
         <div id="rightside" className="ml-5">
