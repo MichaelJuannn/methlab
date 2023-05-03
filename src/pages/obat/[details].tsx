@@ -1,5 +1,5 @@
 import { Footer, Navbar } from "@/components/layout";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import { GetServerSideProps } from "next";
 import { getMedicine } from "@/pages/api/obat/[query]";
 
 interface Medicine {
