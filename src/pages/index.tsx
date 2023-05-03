@@ -11,7 +11,7 @@ export default function Home() {
         <div className="fixed -z-10 h-screen w-screen overflow-hidden">
           <Image
             className="object-cover"
-            src={"/background.png"}
+            src={"/background7.png"}
             alt="background"
             fill
           ></Image>
