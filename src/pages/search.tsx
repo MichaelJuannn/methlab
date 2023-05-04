@@ -5,8 +5,15 @@ export default function Search() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <div className="flex-none md:flex-1 flex flex-col items-center justify-center h-screen">
-        <h2 className="py-5 text-center font-serif text-4xl uppercase tracking-widest">
-          medicine
+      <h2 className="py-5 text-center font-montserrat font-bold text-4xl lowercase tracking-widest">
+          <span style={{ color: "#609EA2" }}>m</span>
+          <span style={{ color: "#C92C6D" }}>e</span>
+          <span style={{ color: "#332C39" }}>d</span>
+          <span style={{ color: "#609EA2" }}>i</span>
+          <span style={{ color: "#C92C6D" }}>c</span>
+          <span style={{ color: "#332C39" }}>i</span>
+          <span style={{ color: "#609EA2" }}>n</span>
+          <span style={{ color: "#C92C6D" }}>e</span>
         </h2>
         <form
           className="w-full ml-auto mr-auto min-w-max max-w-3xl overflow-auto object-contain px-4"

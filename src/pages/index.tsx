@@ -25,7 +25,7 @@ export default function Home() {
               href="search"
               className="m-auto  mt-10 w-1/2 rounded-md bg-red-600 py-2 px-8 text-center"
             >
-              <button className="">Mulai Sekarang</button>
+              <button style={{ color: "white" }}>Mulai Sekarang</button>
             </Link>
           </div>
         </div>
