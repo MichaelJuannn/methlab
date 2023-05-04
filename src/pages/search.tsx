@@ -1,11 +1,12 @@
 import { Navbar, Footer } from "@/components/layout";
+import { useState } from "react";
 
 export default function Search() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <div className="flex-none md:flex-1 flex flex-col items-center justify-center h-screen">
-      <h2 className="py-5 text-center font-montserrat font-bold text-4xl lowercase tracking-widest">
+        <h2 className="py-5 text-center font-montserrat font-bold text-4xl lowercase tracking-widest">
           <span style={{ color: "#609EA2" }}>m</span>
           <span style={{ color: "#C92C6D" }}>e</span>
           <span style={{ color: "#332C39" }}>d</span>
@@ -17,7 +18,7 @@ export default function Search() {
         </h2>
         <form
           className="w-full ml-auto mr-auto min-w-max max-w-3xl overflow-auto object-contain px-4"
-          action="/obat/result"
+          action={`obat/result`}
         >
           <div className="relative">
             <svg
@@ -35,10 +36,10 @@ export default function Search() {
               />
             </svg>
             <input
+              name="q"
               type="text"
               placeholder="Masukan nama obat..."
               className="w-full rounded-full border bg-gray-50 py-4 pl-12 pr-4 text-xl text-gray-500 outline-none focus:border-primary focus:bg-white"
-              
             />
           </div>
         </form>
