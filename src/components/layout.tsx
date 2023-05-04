@@ -78,9 +78,9 @@ export function Footer() {
 export function Navbar() {
   return (
     <div className="bg-primary p-5">
-      <div>
-        <Link href="/">LOGO</Link>
-      </div>
+      <Link href="/">
+        <img src="/logo.png" alt="Logo" width="54" height="54" />
+      </Link>
     </div>
   );
 }
