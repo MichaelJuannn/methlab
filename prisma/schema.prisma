@@ -24,4 +24,5 @@ model Medicine {
   desc String
   activeIngredient String
   manufacturer String
+  image String?
 }

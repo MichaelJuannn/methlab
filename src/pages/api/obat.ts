@@ -6,6 +6,7 @@ interface Data {
   desc: string;
   activeIngredient: string;
   manufacturer: string;
+  image: string | null;
 }
 
 export async function getMedicines() {
