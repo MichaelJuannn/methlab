@@ -12,7 +12,7 @@ module.exports = {
         headers: [
           {
             key: "Access-Control-Allow-Origin",
-            value: "localhost:3000",
+            value: "http://localhost:3000",
           },
         ],
       },
